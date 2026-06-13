@@ -8,19 +8,30 @@
       body {
         margin: 0;
         background-color: bisque;
-        position:relative
+        position:relative;
+        overflow-x: hidden;
       }
       img {
         width: 100%;
         display: block;
       }
-      @keyframes typing1 {
-        from { width: 0; }
-        to { width: 1100px; } /* adjust based on your text's actual rendered width */
-      }
-      @keyframes typing2 {
-        from { width: 0; }
-        to { width: 500px; }
+      @media (max-width: 600px) {
+        @keyframes typing1 {
+          from { width: 0; }
+          to { width: 90vw; }
+        }
+        @keyframes typing2 {
+          from { width: 0; }
+          to { width: 80vw; }
+        }
+        p[style*="Ole"] {
+          font-size: 40px !important;
+          padding-left: 20px !important;
+        }
+        p[style*="Bitcount"] {
+          font-size: 14px !important;
+          padding-left: 20px !important;
+        }
       }
       @keyframes blink {
         50% { border-color: transparent; }
