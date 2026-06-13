@@ -7,19 +7,20 @@
       body {
         margin: 0;
         background-color: bisque;
+        position:relative
       }
       img {
         width: 100%;
         display: block;
       }
-            @keyframes typing1 {
+      @keyframes typing1 {
         from { width: 0; }
-        to { width: 30ch; }
+        to { width: 1100px; } /* adjust based on your text's actual rendered width */
       }
       @keyframes typing2 {
         0% { width: 0; opacity: 0; }
         1% { opacity: 1; }
-        100% { width: 25ch; }
+        100% { width: 500px; }
       }
       @keyframes blink {
         50% { border-color: transparent; }
@@ -31,13 +32,13 @@
 
       .light {
         position: absolute;
-        width: 8px;
-        height: 8px;
-        background: gold;
+        width: 14px;
+        height: 14px;
+        background: rgb(193, 181, 113);
         border-radius: 50%;
         opacity: 0;
-        box-shadow: 0 0 8px gold;
-        animation: twinkle 2s infinite ease-in-out;
+        box-shadow: 0 0 8px rgb(75, 71, 43);
+        animation: twinkle 2.5s infinite ease-in-out;
       }
     </style>
   </head>
