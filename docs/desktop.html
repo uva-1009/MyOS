@@ -14,21 +14,29 @@
   </style>
   </head>
   <body>
-    <div style="border:rgb(121, 77, 84);border-width: 20px; border-style:solid; position:relative;height: 100vh; background-image: url(./images/myos_desktop_wp.png); box-sizing: border-box;">
+    <div style="border:rgb(121, 77, 84);border-width: 20px; border-style:solid; position:relative;height: 100vh; background-image: url(./images/desktop_wp_.png); box-sizing: border-box;">
       <p style="font-family:'Ole',cursive; font-size:67px; color:rgb(121,77,84) ; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.67">NotWindows</p>
     </div>
 
     <div style="display:flex;background-color: rgb(121,77,84);color:rgb(204,117,153); backdrop-filter: blur(10px); justify-content: space-between;position: fixed;top: 0;left: 0;width: 100%; height:32px">
-      <p style="font-family: 'Bitcount Single',monospace; color:bisque; font-size: 20px; margin:0; padding-left: 20px; padding-top:6px;">
+      <p style="font-family: 'Bitcount Single',monospace; color:#ffe4c4; font-size: 20px; margin:0; padding-left: 20px; padding-top:6px;">
         NotWindows
       </p>
       <p style="font-family: 'Ole',cursive; color:bisque; font-size: 30px;padding-bottom:20px; margin:0; padding-left:4px;">
         Choose Love
       </p>
-      <p style="font-family: 'Bitcount Single',monospace; color:bisque; font-size: 20px; margin:0; padding-right: 20px; padding-top:6px;">
+      <p id="timeElement" style="font-family: 'Bitcount Single',monospace; color:bisque; font-size: 20px; margin:0; padding-right: 20px; padding-top:6px;">
         16/06/2026 22:42 PM
       </p>
-
     </div>
+
+    <script>
+      function updateTime() {
+        var CurrentTime = new Date().toLocaleString();
+        var timeText = document.querySelector('#timeElement');
+        timeText.innerHTML = CurrentTime
+      }
+      setInterval(updateTime,1000)
+    </script>
   </body>
 </html> 
